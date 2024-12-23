@@ -1,3 +1,8 @@
+const mammasSida = document.querySelector('.Mammas_sida');
+const pappasSida = document.querySelector('.Pappas_sida');
+mammasSida.classList.add('hidden');
+pappasSida.classList.remove('hidden');
+
 const personData = {
     'Daniel De Geer': {
         birthYear: 1992,
@@ -24,35 +29,35 @@ const personData = {
         birthYear: 1905,
         relation: 'Farmors far',
         percentage: 12.5,
-        history: 'Jan-Carl Louis Alexander Vilhelmsson De Geer var en framstående medlem av familjen under tidigt 1900-tal och bidrog till familjens fortsatta inflytande inom svensk industri.',
+        history: 'Jan-Carl Louis Alexander Vilhelmsson De Geer.',
         link: 'https://sv.wikipedia.org/wiki/Jan-Carl_Louis_Alexander_Vilhelmsson_De_Geer'
     },
-    'Emil Vilhelm Filip De Geer': {
+    'Emil Wilhelm Philip De Geer': {
         birthYear: 1871,
         relation: 'Farmors farfar',
         percentage: 6.25,
-        history: 'Emil Vilhelm Filip De Geer var aktiv inom både politik och näringsliv under en tid då Sverige genomgick stor industriell utveckling.',
+        history: 'Emil De Geer var en Major. Befälhavare från Norrköping östra rullförsoningsområrde nr 26 i Norrköping. Ordförande för Norrköpings skyttegille.',
         link: 'https://sv.wikipedia.org/wiki/Emil_Vilhelm_Filip_De_Geer'
     },
     'Carl Vilhelm Alexander Ludvig De Geer': {
         birthYear: 1836,
         relation: 'Farmors farfars far',
         percentage: 3.125,
-        history: 'Carl Vilhelm Alexander Ludvig De Geer var en betydelsefull person inom den svenska adelsfamiljen under 1800-talet.',
+        history: 'Carl Vilhelm Alexander Ludvig De Geer.',
         link: 'https://sv.wikipedia.org/wiki/Carl_Vilhelm_Alexander_Ludvig_De_Geer'
     },
     'Fredrik Vilhelm De Geer': {
         birthYear: 1794,
         relation: 'Farmors farfars farfar',
         percentage: 1.5625,
-        history: 'Fredrik Vilhelm De Geer levde under en tid av stora samhällsförändringar i Sverige och upprätthöll familjens position inom den svenska adeln.',
+        history: 'Fredrik Vilhelm De Geer.',
         link: 'https://sv.wikipedia.org/wiki/Fredrik_Vilhelm_De_Geer'
     },
     'Alexander De Geer': {
         birthYear: 1744,
         relation: 'Farmors farfars farfars far',
         percentage: 0.78125,
-        history: 'Alexander De Geer var en framstående adelsman under 1700-talet och bidrog till att stärka familjens ställning i det svenska samhället.',
+        history: 'Alexander De Geer föddes den 4 maj 1712 som son till brukspatronen Jean De Geer på Godegård och dennes hustru i andra giftet Maria Christina von Bülow. Alexander blev student vid Uppsala universitet den 23 oktober 1723. Han blev livdrabant den 15 december 1732. 1733 gick han i tjänst för Polens kung Stanisław I Leszczyński och blev utnämnd till Kapten och han deltog då i Polska tronföljdskriget. Han återkom till Sveriges efter dennes abdikation 1736. Den 22 november 1736 utnämndes han till löjtnant vid Östgöta infanteriregemente, och han tog avsked den 17 augusti 1741 i samband med att Hattarnas ryska krig bröt ut.',
         link: 'https://sv.wikipedia.org/wiki/Alexander_De_Geer'
     },
     'Johan Carl De Geer': {
@@ -67,14 +72,14 @@ const personData = {
         relation: 'Farmors farfars(x3) far',
         percentage: 0.1953125,
         history: 'Jean De Geer Jr fortsatte familjens tradition inom handel och industri under sent 1600-tal och tidigt 1700-tal.',
-        link: 'https://sv.wikipedia.org/wiki/Johan_Carl_De_Geer'
+        link: 'https://sv.wikipedia.org/wiki/Jean_De_Geer_(1675%E2%80%931740)'
     },
     'Jean De Geer': {
         birthYear: 1632,
         relation: 'Farmors farfars(x3) farfar',
         percentage: 0.0976563,
         history: 'Jean De Geer var son till Louis De Geer och en central figur i den tidiga svenska adeln. Han var också involverad i industriell utveckling och hade stor påverkan på Sveriges ekonomiska tillväxt under 1600-talet.',
-        link: 'https://sv.wikipedia.org/wiki/Jean_De_Geer'
+        link: 'https://sv.wikipedia.org/wiki/Jean_De_Geer_(1632%E2%80%931696)'
     },
     'Louis De Geer': {
         birthYear: 1587,
@@ -169,3 +174,13 @@ function closeMobileDetails() {
     document.querySelector('.overlay')?.classList.remove('active');
     document.querySelector('.person-details')?.classList.remove('active');
 } 
+
+document.getElementById('toggle').addEventListener('change', function() {
+    if (this.checked) {
+        mammasSida.classList.remove('hidden');
+        pappasSida.classList.add('hidden');
+    } else {
+        mammasSida.classList.add('hidden');
+        pappasSida.classList.remove('hidden');
+    }
+});

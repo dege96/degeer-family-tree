@@ -18,7 +18,7 @@
 	 box-sizing: border-box;
 }
  body {
-	 background: linear-gradient(#4B232C, #C46A71);
+	 background: linear-gradient(#25090f, #C46A71);
 	 min-height: 100vh;
 	 font-family: Oxygen, sans-serif;
 }
@@ -117,6 +117,10 @@
     transition: all 0.5s;
 }
 
+.tree li a{
+    background-color: #25090f50;
+}
+
  .tree li a:hover, .tree li a:hover + ul li a {
 	 border: 1px solid #94a0b4;
 	 color: #fff;
@@ -177,11 +181,14 @@ p1{
 
 
 .textbubbla-container {
+    position: sticky;
+    top: 1vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
-    height: 27vh;
+    height: 12vh;
+    margin-right: 3vh;
 }
 
 .textbubbla {
@@ -193,7 +200,7 @@ p1{
 
 .stats-container {
     position: sticky;
-    top: 20px;
+    top: 25vh;
     width: 35vw;
     flex-shrink: 0;
     max-height: calc(100vh - 40px);
@@ -272,14 +279,79 @@ p1{
 }
 
 .tree a:hover {
-    transform: scale(1.05);
+    background: var(--dark-color2);
 }
 
 .tree a.selected {
     background: var(--light-color2);
 }
 
-@media all and (max-width: 1200px) {
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.041);
+    border: 1px solid rgba(16, 84, 20, 0.229);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "De Geer"; /* Default text */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 34px; /* Align text vertically */
+    width: 100%;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: rgba(255, 255, 255, 0.041);
+    border: 1px solid rgba(16, 84, 20, 0.229);
+  }
+
+  
+  input:checked + .slider:before {
+      content: "Mårtensson"; /* Text for the ON state */
+    transform: translateX(0px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+
+/* IPAD */
+
+  @media all and (max-width: 1200px) {
     #container {
         flex-direction: column-reverse;
         width: 95%;
@@ -295,6 +367,8 @@ p1{
         padding-right: 0;
     }
 }
+
+/* TELEFON */
 
 @media all and (max-width: 768px) {
     .tree li a {
@@ -327,6 +401,10 @@ p1{
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .person-details{
+        display: none;
     }
 
     .person-details.active {
