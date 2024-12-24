@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <div class="textbubbla-container">
 	<div class="textbubbla">
 <!-- Rounded switch -->
@@ -25,26 +26,30 @@
             <!-- <h2>Släktinformation</h2> -->
             <div class="stat-row">
                 <p1 class="stat-label">Namn:</p1>
-                <p1 href="https://sv.wikipedia.org/wiki/Daniel_De_Geer" class="stat-value" id="person-name">Daniel De Geer</p1>
+                <p1 href="https://sv.wikipedia.org/wiki/Daniel_De_Geer" class="stat-value" id="person-name"></p1>
             </div>
             <div class="stat-row">
                 <p1 class="stat-label">Födelseår:</p1>
-                <p1 class="stat-value" id="birth-year">1992</p1>
+                <p1 class="stat-value" id="birth-year"></p1>
             </div>
             <div class="stat-row">
                 <p1 class="stat-label">Släktskap:</p1>
                 <div class="stat-bar">
-                    <div class="stat-fill" style="width: 0.05%"><p1 class="stat-bar-value">100%</p1></div>
+                    <div class="stat-fill" style="width: 0%"><p1 class="stat-bar-value">0%</p1></div>
                     
                 </div>
             </div>
             <div class="stat-row">
                 <p1 class="stat-label">Relation:</p1>
-                <p1 class="stat-value" id="relation">Du</p1>
+                <p1 class="stat-value" id="relation"></p1>
+            </div>
+            <div class="stat-row">
+                <p1 class="stat-label">Yrke:</p1>
+                <p1 class="stat-value" id="yrke"></p1>
             </div>
             
             <div class="history-box">
-                <p1 id="person-history">Daniel De Geer, född den 6 december 1992, är en svensk röstskådespelare...</p1>
+                <p1 id="person-history">...</p1>
             </div>
 
         </div>
@@ -52,8 +57,8 @@
 
     <ul class="tree">
         <li>
-            <a href="#">
-                <img src="/images/DanielDeGeer.jpg" alt="Daniel De Geer">
+            <a href="#" id="DanielDeGeer">
+                <img src="/images/DanielDeGeer.jpg"  alt="Daniel De Geer">
                 Daniel De Geer
                 <time datetime="1992">1992</time>
             </a>
@@ -74,30 +79,30 @@
                             <ul>
                                 <li>
                                     <a href="#">
-                                        <img src="/images/Skold.png" alt="Jan-Carl Louis De Geer">
+                                        <img src="/images/jancarl.JPEG" alt="Jan-Carl Louis De Geer">
                                         Jan-Carl Louis De Geer
                                         <time datetime="1905">1905</time>
                                     </a>
                                     <ul>
                                         <li>
                                             <a href="#">
-                                                <img src="/images/Skold.png" alt="Emil Vilhelm Filip De Geer">
-                                                Emil Vilhelm Filip De Geer
+                                                <img src="/images/emil.jpg" alt="Emil Wilhelm Philip De Geer">
+                                                Emil Wilhelm Philip De Geer
                                                 <time datetime="1871">1871</time>
                                             </a>
                                             <ul>
                                                 <li>
                                                     <a href="#">
-                                                        <img src="/images/Skold.png" alt="Carl Vilhelm De Geer">
-                                                        Carl Vilhelm De Geer
+                                                        <img src="/images/ludvig.JPEG" alt="Carl Wilhelm De Geer">
+                                                        Carl Wilhelm Alexander Ludvig De Geer
                                                         <time datetime="1836">1836</time>
                                                     </a>
                                                     <ul>
                                                         <li>
                                                             <a href="#">
-                                                                <img src="/images/Skold.png" alt="Fredrik Vilhelm De Geer">
-                                                                Fredrik Vilhelm De Geer
-                                                                <time datetime="1794">1794</time>
+                                                                <img src="/images/Skold.png" alt="Fredrik Wilhelm De Geer">
+                                                                Fredrik Wilhelm De Geer
+                                                                <time datetime="1796">1796</time>
                                                             </a>
                                                             <ul>
                                                                 <li>
@@ -157,21 +162,21 @@
                 </li>
                 <li class="Mammas_sida">
                     <a href="#">
-                        <img src="/images/Catarina.jpg" alt="Catarina De Geer (Bergh)">
+                        <img src="/images/cdg.jpg" alt="Catarina De Geer (Bergh)">
                         Catarina De Geer (Bergh)
                         <time datetime="1964">1964</time>
                     </a>
                     <ul>
                         <li>
                             <a href="#">
-                                <img src="/images/Britt.png" alt="Britt Bergh (Mårtensson)">
-                                Britt Bergh (Mårtensson)
+                                <img src="/images/Britt.jpg" alt="Britt Ingalill Mårtensson Bergh">
+                                Britt Ingalill Mårtensson Bergh
                                 <time datetime="1937">1936</time>
                             </a>
                             <ul>
                                 <li>
                                     <a href="#">
-                                        <img src="/images/KarlOM.png" alt="Karl Oskar Mårtensson">
+                                        <img src="/images/carloskar2.jpg" alt="Karl Oskar Mårtensson">
                                         Karl Oskar Mårtensson
                                         <time datetime="1905">1907</time>
                                     </a>
@@ -189,60 +194,6 @@
                                                         Mårten Nilsson
                                                         <time datetime="1836">1836</time>
                                                     </a>
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#">
-                                                                <img src="/images/Skold.png" alt="Fredrik Vilhelm De Geer">
-                                                                Fredrik Vilhelm De Geer
-                                                                <time datetime="1794">1794</time>
-                                                            </a>
-                                                            <ul>
-                                                                <li>
-                                                                    <a href="#">
-                                                                        <img src="/images/Skold.png" alt="Alexander De Geer">
-                                                                        Alexander De Geer
-                                                                        <time datetime="1744">1744</time>
-                                                                    </a>
-                                                                    <ul>
-                                                                        <li>
-                                                                            <a href="#">
-                                                                                <img src="/images/Skold.png" alt="Johan Carl De Geer">
-                                                                                Johan Carl De Geer
-                                                                                <time datetime="1706">1706</time>
-                                                                            </a>
-                                                                            <ul>
-                                                                                <li>
-                                                                                    <a href="#">
-                                                                                        <img src="/images/Skold.png" alt="Jean De Geer Jr">
-                                                                                        Jean De Geer Jr
-                                                                                        <time datetime="1675">1675</time>
-                                                                                    </a>
-                                                                                    <ul>
-                                                                                        <li>
-                                                                                            <a href="#">
-                                                                                                <img src="/images/JeanDeGeer.jpg" alt="Jean De Geer">
-                                                                                                Jean De Geer
-                                                                                                <time datetime="1632">1632</time>
-                                                                                            </a>
-                                                                                            <ul>
-                                                                                                <li>
-                                                                                                    <a href="#">
-                                                                                                        <img src="/images/Louis.png" alt="Louis De Geer">
-                                                                                                        Louis De Geer
-                                                                                                        <time datetime="1587">1587</time>
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                            </ul>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
                                                 </li>
                                             </ul>
                                         </li>
@@ -259,6 +210,7 @@
 
 <script src="person-stats.js"></script>
 <div class="overlay"></div>
+
 <div class="person-details">
     <button class="close-button">&times;</button>
     <div class="character-info" id="mobile-person-info">
@@ -279,6 +231,10 @@
         <div class="stat-row">
             <p1 class="stat-label">Relation:</p1>
             <p1 class="stat-value" id="mobile-relation"></p1>
+        </div>
+        <div class="stat-row">
+            <p1 class="stat-label">Yrke:</p1>
+            <p1 class="stat-value" id="mobile-occupation"></p1>
         </div>
         <div class="history-box">
             <p1 id="mobile-person-history"></p1>

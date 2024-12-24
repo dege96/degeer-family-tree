@@ -3,11 +3,13 @@ const pappasSida = document.querySelector('.Pappas_sida');
 mammasSida.classList.add('hidden');
 pappasSida.classList.remove('hidden');
 
+
 const personData = {
     'Daniel De Geer': {
         birthYear: 1992,
         relation: 'Du',
         percentage: 100,
+        occupation: 'Ingenjör',
         history: 'Daniel De Geer, född den 6 december 1992, är en svensk kille mest känd för sin släktskap till Victor De Geer, också världskänd för sin roll som Håkan Bråkan i filmen Sune och hans värld och Grodmysteriet. Barnbarns barnbarns barnbarns barnbarns barnbarn till Louis De Geer',
         link: 'https://www.imdb.com/name/nm6150276/'
     },
@@ -15,6 +17,7 @@ const personData = {
         birthYear: 1962,
         relation: 'Far',
         percentage: 50,
+        occupation: 'Entreprenöriell ingenjör',
         history: 'Johan De Geer är en innovativ och entreprenöriell medlem av familjen och är känd för att alltid förlora i sällskapsspel.',
         link: 'https://sv.wikipedia.org/wiki/Johan_De_Geer'
     },
@@ -29,6 +32,7 @@ const personData = {
         birthYear: 1905,
         relation: 'Farmors far',
         percentage: 12.5,
+        occupation: '',
         history: 'Jan-Carl Louis Alexander Vilhelmsson De Geer.',
         link: 'https://sv.wikipedia.org/wiki/Jan-Carl_Louis_Alexander_Vilhelmsson_De_Geer'
     },
@@ -36,48 +40,55 @@ const personData = {
         birthYear: 1871,
         relation: 'Farmors farfar',
         percentage: 6.25,
+        occupation: 'Befälhavare',
         history: 'Emil De Geer var en Major. Befälhavare från Norrköping östra rullförsoningsområrde nr 26 i Norrköping. Ordförande för Norrköpings skyttegille.',
         link: 'https://sv.wikipedia.org/wiki/Emil_Vilhelm_Filip_De_Geer'
     },
-    'Carl Vilhelm Alexander Ludvig De Geer': {
+    'Carl Wilhelm Alexander Ludvig De Geer': {
         birthYear: 1836,
         relation: 'Farmors farfars far',
         percentage: 3.125,
-        history: 'Carl Vilhelm Alexander Ludvig De Geer.',
-        link: 'https://sv.wikipedia.org/wiki/Carl_Vilhelm_Alexander_Ludvig_De_Geer'
+        occupation: 'Underlöjtnant',
+        history: 'Carl Wilhelm Alexander Ludvig De Geer. Underlöjtnant vid Andra livgrenadjärregementet I 5.',
+        link: 'https://sv.wikipedia.org/wiki/Carl_Wilhelm_Alexander_Ludvig_De_Geer'
     },
-    'Fredrik Vilhelm De Geer': {
-        birthYear: 1794,
+    'Fredrik Wilhelm De Geer': {
+        birthYear: 1796,
         relation: 'Farmors farfars farfar',
         percentage: 1.5625,
-        history: 'Fredrik Vilhelm De Geer.',
-        link: 'https://sv.wikipedia.org/wiki/Fredrik_Vilhelm_De_Geer'
+        occupation: 'Major',
+        history: 'Fredrik Wilhelm De Geer.',
+        link: 'https://sv.wikipedia.org/wiki/Fredrik_Wilhelm_De_Geer'
     },
     'Alexander De Geer': {
         birthYear: 1744,
         relation: 'Farmors farfars farfars far',
         percentage: 0.78125,
-        history: 'Alexander De Geer föddes den 4 maj 1712 som son till brukspatronen Jean De Geer på Godegård och dennes hustru i andra giftet Maria Christina von Bülow. Alexander blev student vid Uppsala universitet den 23 oktober 1723. Han blev livdrabant den 15 december 1732. 1733 gick han i tjänst för Polens kung Stanisław I Leszczyński och blev utnämnd till Kapten och han deltog då i Polska tronföljdskriget. Han återkom till Sveriges efter dennes abdikation 1736. Den 22 november 1736 utnämndes han till löjtnant vid Östgöta infanteriregemente, och han tog avsked den 17 augusti 1741 i samband med att Hattarnas ryska krig bröt ut.',
+        occupation: 'Sergant',
+        history: 'Alexander föddes 12 juni 1744 på Godegård. Kapten. Gift 6 oktober 1785 med Ulrika Elisabet Wolffelt. Paret fick barnen: - Althea Maria f.1786-10-08 på Skälboö - Lovisa Ulrika - Fredrik Vilhelm f.1796-08-20 på Skälboö - Carolina Sofia',
         link: 'https://sv.wikipedia.org/wiki/Alexander_De_Geer'
     },
     'Johan Carl De Geer': {
         birthYear: 1706,
         relation: 'Farmors farfars farfars farfar',
         percentage: 0.390625,
-        history: 'Johan Carl De Geer var en betydelsefull person inom den svenska grenen av familjen De Geer under 1700-talet.',
+        occupation: 'Brukspatron',
+        history: 'Johan Carl De Geer. ',
         link: 'https://sv.wikipedia.org/wiki/Johan_Carl_De_Geer'
     },
     'Jean De Geer Jr': {
         birthYear: 1674,
         relation: 'Farmors farfars(x3) far',
         percentage: 0.1953125,
-        history: 'Jean De Geer Jr fortsatte familjens tradition inom handel och industri under sent 1600-tal och tidigt 1700-tal.',
+        occupation: 'Brukspatron',
+        history: '',
         link: 'https://sv.wikipedia.org/wiki/Jean_De_Geer_(1675%E2%80%931740)'
     },
     'Jean De Geer': {
         birthYear: 1632,
         relation: 'Farmors farfars(x3) farfar',
         percentage: 0.0976563,
+        occupation: 'Brukspatron',
         history: 'Jean De Geer var son till Louis De Geer och en central figur i den tidiga svenska adeln. Han var också involverad i industriell utveckling och hade stor påverkan på Sveriges ekonomiska tillväxt under 1600-talet.',
         link: 'https://sv.wikipedia.org/wiki/Jean_De_Geer_(1632%E2%80%931696)'
     },
@@ -85,6 +96,7 @@ const personData = {
         birthYear: 1587,
         relation: 'Farmors farfars(x4) far',
         percentage: 0.0488281,
+        occupation: 'Industriell fader',
         history: 'Louis De Geer är din anfader tolv generationer tillbaka. Louis De Geer var en framstående svensk adelsman och affärsman, som anses vara en av grundarna av Sveriges industriliv. Han var även politiskt aktiv och en av de första som investerade i den svenska järnindustrin. Hans ättlingar har haft en betydande påverkan på svensk historia.',
         link: 'https://sv.wikipedia.org/wiki/Louis_De_Geer'
     }
