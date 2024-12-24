@@ -239,7 +239,7 @@ document.getElementById('toggle').addEventListener('change', function() {
         pappasSida.classList.remove('hidden');
     }
 });
-
+/* 
 function checkAnswer() {
     const answer = document.getElementById('riddle-answer').value.toLowerCase();
     const feedback = document.getElementById('feedback');
@@ -266,4 +266,4 @@ function checkAnswer() {
 // Förhindra att användaren kan se huvudinnehållet genom att inspektera element
 if (localStorage.getItem('riddleSolved') !== 'true') {
     document.getElementById('main-content').style.display = 'none';
-}
+} */
